@@ -1,7 +1,7 @@
-import { Card, CardContent } from "@mui/material";
+import { Card, CardContent, Grid } from "@mui/material";
 import React, { useContext, useState } from "react";
 import { firestore, postToJSON } from "../lib/firebase";
-
+import Navbar from "../component/Navbar";
 //
 
 export async function getServerSideProps() {
@@ -31,17 +31,25 @@ export default function Home(props) {
     <div>
       <div style={{ marginTop: "30px", backgroundColor: "black" }} />
       <div>View Recipes</div>
-
       <div style={{ marginTop: "2%" }}></div>
-      {missingItems.map((info) => (
-        <Card style={{ width: "300px" }}>
-          <CardContent>Dish Name: {info.dish}</CardContent>
-          <CardContent>Ingrients: {info.ingredients}</CardContent>
-          <CardContent>Duration: {info.duration}</CardContent>
-          <CardContent>Serving Size: {info.serving}</CardContent>
-          <CardContent>Serving Method: {info.method}</CardContent>
-        </Card>
-      ))}
+      <div style={{ display: "flex" }}>
+        {missingItems.map((info) => (
+          <Card
+            sx={{
+              borderStyle: "solid",
+              height: "300px",
+              width: "300px",
+              marginRight: "20px",
+            }}
+          >
+            <CardContent>Dish Name: {info.dish}</CardContent>
+            <CardContent>Ingrients: {info.ingredients}</CardContent>
+            <CardContent>Duration: {info.duration}</CardContent>
+            <CardContent>Serving Size: {info.serving}</CardContent>
+            <CardContent>Serving Method: {info.method}</CardContent>
+          </Card>
+        ))}
+      </div>
     </div>
   );
 }
