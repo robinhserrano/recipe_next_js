@@ -7,7 +7,7 @@ import NextLink from 'next/link';
 export default function NavBar({ children }) {
 	return (
 		<div>
-			<Toolbar style={{ backgroundColor: '#3a7196' }}>
+			<Toolbar style={{ backgroundColor: 'white' }}>
 				<NextLink href="/" passHref>
 					<Link>
 						<Typography
@@ -15,7 +15,7 @@ export default function NavBar({ children }) {
 								font: 'SansSerif',
 								fontSize: '15px',
 								letterSpacing: '1px',
-								color: '#ffffff'
+								color: 'blue'
 							}}
 						>
 							HOME
@@ -28,7 +28,7 @@ export default function NavBar({ children }) {
 						fontSize: '25px',
 						marginLeft: '20px',
 						marginRight: '20px',
-						color: '#ffffff'
+						color: 'blue'
 					}}
 				>
 					|
@@ -41,7 +41,7 @@ export default function NavBar({ children }) {
 								font: 'SansSerif',
 								fontSize: '15px',
 								letterSpacing: '1px',
-								color: '#ffffff'
+								color: 'blue'
 							}}
 						>
 							CREATE RECIPES
