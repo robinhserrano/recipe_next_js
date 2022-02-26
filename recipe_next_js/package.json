@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "export NODE_OPTIONS=--openssl-legacy-provider; next dev",
     "build": "export NODE_OPTIONS=--openssl-legacy-provider; next build",
-    "start":  "next start -p $PORT",
+    "start": "next start -p $PORT",
     "lint": "next lint"
   },
   "dependencies": {
@@ -23,7 +23,8 @@
     "react-dom": "17.0.2",
     "react-firebase-hooks": "^5.0.3",
     "react-hook-form": "^7.27.1",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "webpack": "^5.69.1"
   },
   "devDependencies": {
     "eslint": "8.9.0",
@@ -32,5 +33,5 @@
   "engines": {
     "npm": ">=8.3.0",
     "node": ">=16.6.1"
-}
+  }
 }
